@@ -20,14 +20,12 @@ public class Computer implements RentalAgency {
 	}
 	
 	@Override
-	public void calculateRent()
+	public double calculateRent(int duration)
 	{
-		Scanner scanner = new Scanner(System.in);
 		double rent=0.0;
-		int duration=0;
-		System.out.println("enter duration");
-		duration = scanner.nextInt();
 		rent=duration*this.getRate();
-		System.out.println("Rent: "+rent);
+		return rent;
 	}
+	
+	
 }

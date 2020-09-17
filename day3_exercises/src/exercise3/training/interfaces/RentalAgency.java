@@ -4,6 +4,5 @@ public interface RentalAgency {
 
 	double getRate();
 	String getName();
-	void calculateRent();
-	
+	double calculateRent(int duration);
 }
