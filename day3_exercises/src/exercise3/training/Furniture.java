@@ -5,6 +5,8 @@ import java.util.*;
 
 public class Furniture implements RentalAgency {
 
+	int quantity=0;
+	
 	@Override
 	public double getRate() {
 		// TODO Auto-generated method stub
@@ -23,5 +25,19 @@ public class Furniture implements RentalAgency {
 		double rent=0.0;
 		return rent;
 	}
+	
+	@Override
+	public void updateQuantity(int quantity)
+	{
+		this.quantity=quantity;
+		
+	}
+	
+	@Override
+	public int getQuantity()
+	{
+		return this.quantity;
+	}
+	
 
 }

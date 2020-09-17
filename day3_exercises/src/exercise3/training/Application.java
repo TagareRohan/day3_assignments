@@ -17,7 +17,10 @@ public class Application {
 		double total=0.0;
 		
 		RentalAgency objList[] = new RentalAgency[1000];
-		int i=0;
+		objList[0] = obj.getProduct(1);
+		objList[1] = obj.getProduct(2);
+		objList[2] = obj.getProduct(3);
+		
 		do
 		{
 			System.out.println("1)Computer\n2)Furniture\n3)AirConditioner\nEnter Choice");
@@ -35,19 +38,20 @@ public class Application {
 			else
 			{
 				total=total+rentObj.calculateRent(duration);
-				objList[i]=rentObj;
+				int quantity=rentObj.getQuantity();
+				rentObj.updateQuantity(quantity+1);
 			}
 			
 			
 			System.out.println("Rent another?");
 			response = scanner.next();
-			i++;
 		}while(response.equalsIgnoreCase("Yes"));
 		
-		for (int k=0;k<i;k++)
+		for (int k=0;k<3;k++)
 		{
 			System.out.println("Name: "+objList[k].getName());
 			System.out.println("Rate: "+objList[k].getRate());
+			System.out.println("Quantity: "+objList[k].getQuantity());
 		}
 		System.out.println("Total Rent: "+total);
 	}
