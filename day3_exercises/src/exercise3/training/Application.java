@@ -38,8 +38,8 @@ public class Application {
 			else
 			{
 				total=total+rentObj.calculateRent(duration);
-				int quantity=rentObj.getQuantity();
-				rentObj.updateQuantity(quantity+1);
+				int quantity=objList[choice-1].getQuantity();
+				objList[choice-1].updateQuantity(quantity+1);
 			}
 			
 			
